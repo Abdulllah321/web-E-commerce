@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="image/logo.PNG">
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<style>
+    #product .thumb-wrapper {
+        background: #fff;
+        border-radius: 6px;
+        text-align: left;
+        position: relative;
+        color: black;
+        width: 100%;
+    }
+
+    #product .thumb-content .fs-card-title {
+        height: 60px;
+        line-height: 18px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 0;
+        overflow: hidden;
+        margin-bottom: 4px;
+        font-size: 16px;
+        text-decoration: #0d1128;
+        font-weight: bold;
+    }
+
+    #product .thumb-content .description {
+        height: 40px;
+        line-height: 20px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        margin-bottom: 4px;
+        font-size: 12px;
+        text-decoration: #0d1128;
+    }
+
+    #product:hover {
+        transform: translateY(0px);
+        transition: .5s;
+    }
+
+    a {
+        text-decoration: none;
+    }
+</style>
+<script>
+    $(document).ready(function () {
+        $(".wish-icon i").click(function () {
+            $(this).toggleClass("fa-heart fa-heart-o");
+        });
+    });	
+</script>
+<script>
+    $(function () {
+      $('#toggleThis').click(function () {
+        $('#content').slideToggle(300)
+     });
+    });
+  </script>
+<body>
+    <div class="all">
+  
+        <div id="preloader"></div>
+        <div class="all">
+          <!--header-->
+          <header class="row no-gutters d-flex align-items-center align-items-stretch">
+            <div class="col-md-4 d-flex align-items-center py-4">
+              <a class="navbar-brand" href="index.html">E-commerce<span class="d-flex">Web</span></a>
+            </div>
+            <div class="col-lg-8 d-block">
+              <div class="row d-flex">
+                <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4" style="margin-left: -30%;">
+                  <div class="icon d-flex justify-content-center align-items-center"><span class="fa fa-envelope"
+                      style="color: darkorange; font-size: 24px; margin-right: 10px; "></span>
+                  </div>
+                  <div class="text">
+                    <h4
+                      style="font-weight: 600; color: var(--primary-color); line-height: 1; margin-left: 5%; font-size: 18px; letter-spacing: 1px;margin-top: 10px;">
+                      Email:</h4>
+                    <span
+                      style="font-weight: 200; color: var(--primary-color); line-height: 1; margin-left: 5%; font-size: 15px; letter-spacing: 1px;">youremail@email.com</span>
+                  </div>
+                </div>
+                <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4" style="margin-left: -30%;">
+                  <div class="icon d-flex justify-content-center align-items-center"><span class="fa fa-phone"
+                      style="color: darkorange; font-size: 24px; margin-right: 15px;"></span></div>
+                  <div class="text1">
+                    <h5
+                      style="font-weight: 600; color: var(--primary-color); line-height: 1; margin-left: 1%; font-size: 18px; letter-spacing: 1px;margin-top: 10px;">
+                      Call Us</h5>
+                    <span
+                      style="font-weight: 200; color: var(--primary-color); line-height: 1; padding-left: 0%; font-size: 15px; letter-spacing: 1px; display: inline; width: 100px;">+
+                      92 323 3297166</span>
+                  </div>
+                </div>
+      
+                <button class="btn btn-primary" type="button" style="margin-left: -100px;"><span></span><i
+                    class="fa fa-shopping-cart"></i>&nbsp;&nbsp; Your Cart</button>
+                <button class="btn btn-primary" type="button" style="margin-right: 30px;"><span></span><i
+                    class="fa fa-heart"></i>&nbsp;&nbsp; Favorites</button>
+              </div>
+            </div>
+          </header>
+          <!--Navbar-->
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-sticky">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                      data-bs-auto-close="outside">Products</a>
+                    <ul class="dropdown-menu shadow">
+                      <li class="dropend">
+                        <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown"
+                          data-bs-auto-close="outside">Computer & Laptops</a>
+                        <ul class="dropdown-menu shadow">
+                          <li><a href="laptop.html" class="dropdown-item" data-bs-auto-close="outside">Laptops</a></li>
+                          <li class="dropend">
+                            <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown"
+                              data-bs-auto-close="outside">Computer Components</a>
+                            <ul class="dropdown-menu shadow submenu">
+                              <li class="dropend">
+                              <li class="dropdown-heading" style="color: var(--secondary-color);">Computer Components</li>
+                              <hr class="dropdown-divider" style="color: var(--secondary-color)">
+                              <a href="#" class="dropdown-item" data-bs-auto-close="outside">Grapic Cards</a>
+                              <a href="#" class="dropdown-item" data-bs-auto-close="outside">Cooling Solutions</a>
+                              <a href="#" class="dropdown-item" data-bs-auto-close="outside">RAM/Memory</a>
+                              <a href="#" class="dropdown-item" data-bs-auto-close="outside">Casing</a>
+                              <a href="#" class="dropdown-item" data-bs-auto-close="outside">Power Supply</a>
+                              <a href="#" class="dropdown-item" data-bs-auto-close="outside">Mother Board</a>
+                              <a href="#" class="dropdown-item" data-bs-auto-close="outside">Casing Fans</a>
+                              <a href="#" class="dropdown-item" data-bs-auto-close="outside">PC Cooling</a>
+                              <a href="#" class="dropdown-item" data-bs-auto-close="outside">Sound Cards</a>
+                              <a href="#" class="dropdown-item" data-bs-auto-close="outside">Proccessors</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="dropend">
+                        <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown"
+                          data-bs-auto-close="outside">Periphrals</a>
+                        <ul class="dropdown-menu shadow">
+                          <li class="dropend">
+                          <li class="dropdown-heading" style="color: var(--secondary-color);">Perephrals</li>
+                          <hr class="dropdown-divider" style="color: var(--secondary-color)">
+                          <a href="#" class="dropdown-item" data-bs-auto-close="outside">Pc Gaming Accessoiries</a>
+                          <a href="#" class="dropdown-item" data-bs-auto-close="outside">Headsets</a>
+                          <a href="#" class="dropdown-item" data-bs-auto-close="outside">Mouse</a>
+                          <a href="#" class="dropdown-item" data-bs-auto-close="outside">Keyboad</a>
+                          <a href="#" class="dropdown-item" data-bs-auto-close="outside">Mouse Peds</a>
+                          <a href="#" class="dropdown-item" data-bs-auto-close="outside">Web cams & chatpacks</a>
+                          <a href="#" class="dropdown-item" data-bs-auto-close="outside">Multimedia speakers</a>
+                        </ul>
+                      </li>
+                      <li class="dropend">
+                        <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown"
+                          data-bs-auto-close="outside">Storage</a>
+                        <ul class="dropdown-menu shadow">
+                          <li class="dropend">
+                          <li class="dropdown-heading" style="color: var(--secondary-color);">Storage</li>
+                          <hr class="dropdown-divider" style="color: var(--secondary-color)">
+                          <a href="#" class="dropdown-item" data-bs-auto-close="outside">SSD</a>
+                          <a href="#" class="dropdown-item" data-bs-auto-close="outside">USB flash drive</a>
+                          <a href="#" class="dropdown-item" data-bs-auto-close="outside">External drives</a>
+                          <a href="#" class="dropdown-item" data-bs-auto-close="outside">HDD adopter and docs</a>
+                          <a href="#" class="dropdown-item" data-bs-auto-close="outside">hard drives</a>
+                          <a href="#" class="dropdown-item" data-bs-auto-close="outside">laptop hard drives</a>
+                        </ul>
+                      </li>
+                      <li class="dropend">
+                        <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown"
+                          data-bs-auto-close="outside">Networking</a>
+                        <ul class="dropdown-menu shadow">
+                          <li class="dropend">
+                          <li class="dropdown-heading" style="color: var(--secondary-color);">Networking</li>
+                          <hr class="dropdown-divider" style="color: var(--secondary-color)">
+                          <a href="#" class="dropdown-item" data-bs-auto-close="outside">Switches</a>
+                          <a href="#" class="dropdown-item" data-bs-auto-close="outside">Routers</a>
+                          <a href="#" class="dropdown-item" data-bs-auto-close="outside">Range extender & Adapter</a>
+                          <a href="#" class="dropdown-item" data-bs-auto-close="outside">Networking Essential</a>
+                          <a href="#" class="dropdown-item" data-bs-auto-close="outside">Wireless adapter</a>
+                        </ul>
+                      </li>
+                      <li class="dropend">
+                        <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown"
+                          data-bs-auto-close="outside">Computer Accessories</a>
+                        <ul class="dropdown-menu shadow">
+                          <li class="dropend">
+                          <li class="dropdown-heading" style="color: var(--secondary-color);">Computer Accessories</li>
+                          <hr class="dropdown-divider" style="color: var(--secondary-color)">
+                          <a href="#" class="dropdown-item" data-bs-auto-close="outside">cables</a>
+                          <a href="#" class="dropdown-item" data-bs-auto-close="outside">USB hubs</a>
+                          <a href="#" class="dropdown-item" data-bs-auto-close="outside">MAC accessories</a>
+                          <a href="#" class="dropdown-item" data-bs-auto-close="outside">Tv tunner</a>
+                          <a href="#" class="dropdown-item" data-bs-auto-close="outside">docks</a>
+                          <a href="#" class="dropdown-item" data-bs-auto-close="outside">USB prt card</a>
+                          <a href="#" class="dropdown-item" data-bs-auto-close="outside">gaming chair</a>
+                          <a href="#" class="dropdown-item" data-bs-auto-close="outside">gaming bundle</a>
+                          <a href="#" class="dropdown-item" data-bs-auto-close="outside">paper & CD shradders</a>
+                        </ul>
+                      </li>
+                      <li class="dropend">
+                        <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown"
+                          data-bs-auto-close="outside">Laptop accessories</a>
+                        <ul class="dropdown-menu shadow">
+                          <li class="dropend">
+                          <li class="dropdown-heading" style="color: var(--secondary-color);">Laptop Accessories</li>
+                          <hr class="dropdown-divider" style="color: var(--secondary-color)">
+                          <a href="#" class="dropdown-item" data-bs-auto-close="outside">laptop bags</a>
+                          <a href="#" class="dropdown-item" data-bs-auto-close="outside">laptop chargers</a>
+                          <a href="#" class="dropdown-item" data-bs-auto-close="outside">other accessories for laptop </a>
+                          <a href="#" class="dropdown-item" data-bs-auto-close="outside">laptop cooling pads & table</a>
+                          <a href="#" class="dropdown-item" data-bs-auto-close="outside">laptop batteries</a>
+                        </ul>
+                      </li>
+                      <li><a href="#" class="dropdown-item" data-bs-auto-close="outside">Printers</a></li>
+                      <li class="dropend">
+                        <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown"
+                          data-bs-auto-close="outside">Printers & accessories</a>
+                        <ul class="dropdown-menu shadow">
+                          <li class="dropend">
+                          <li class="dropdown-heading" style="color: var(--secondary-color);">Printers & Accessories</li>
+                          <hr class="dropdown-divider" style="color: var(--secondary-color)">
+                          <a href="#" class="dropdown-item" data-bs-auto-close="outside">Printers Toner & cartridges</a>
+                          <a href="#" class="dropdown-item" data-bs-auto-close="outside">Other printer accessories</a>
+                          <a href="#" class="dropdown-item" data-bs-auto-close="outside">3d printing</a>
+                          <a href="#" class="dropdown-item" data-bs-auto-close="outside">price tags guns & cash drawer</a>
+                          <a href="#" class="dropdown-item" data-bs-auto-close="outside">barcode labels & printer rolls</a>
+                          <a href="#" class="dropdown-item" data-bs-auto-close="outside">barcode scanners accessories</a>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#" data-bs-auto-close="outside" class="dropdown-item">computer monitors</a>
+                      </li>
+                      <li>
+                        <a href="#" data-bs-auto-close="outside" class="dropdown-item">desktop computer</a>
+                      </li>
+                      <li>
+                        <a href="#" data-bs-auto-close="outside" class="dropdown-item">Software</a>
+                      </li>
+                      <li>
+                        <a href="#" data-bs-auto-close="outside" class="dropdown-item">development tools</a>
+                      </li>
+                      <li>
+                        <a href="#" data-bs-auto-close="outside" class="dropdown-item">attendence machine & finger print
+                          reader</a>
+                      </li>
+                  </li>
+                </ul>
+                <li class="dropend">
+                  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                    data-bs-auto-close="outside">Camera</a>
+                  <ul class="dropdown-menu shadow">
+                    <li class="dropend">
+                      <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown"
+                        data-bs-auto-close="outside">Camera accessories</a>
+                      <ul class="dropdown-menu shadow submenu">
+                        <li class="dropend">
+                        <li class="dropdown-heading" style="color: var(--secondary-color);">Camera Accessories</li>
+                        <hr class="dropdown-divider" style="color: var(--secondary-color)">
+                        <a href="#" class="dropdown-item" data-bs-auto-close="outside">lighting & studio</a>
+                        <a href="#" class="dropdown-item" data-bs-auto-close="outside">camera fiters</a>
+                        <a href="#" class="dropdown-item" data-bs-auto-close="outside">flash & triggers</a>
+                        <a href="#" class="dropdown-item" data-bs-auto-close="outside">memory cards</a>
+                        <a href="#" class="dropdown-item" data-bs-auto-close="outside">GoPro Accessories</a>
+                        <a href="#" class="dropdown-item" data-bs-auto-close="outside">Tripods</a>
+                        <a href="#" class="dropdown-item" data-bs-auto-close="outside">video Tripods</a>
+                        <a href="#" class="dropdown-item" data-bs-auto-close="outside">Bags & cases</a>
+                        <a href="#" class="dropdown-item" data-bs-auto-close="outside">camera rings and suppoerts</a>
+                        <a href="#" class="dropdown-item" data-bs-auto-close="outside">tripods heads</a>
+                        <a href="#" class="dropdown-item" data-bs-auto-close="outside">camera sliders</a>
+                        <a href="#" class="dropdown-item" data-bs-auto-close="outside">camera straps</a>
+                        <a href="#" class="dropdown-item" data-bs-auto-close="outside">audio equapment</a>
+                        <a href="#" class="dropdown-item" data-bs-auto-close="outside">lens skin</a>
+                        <a href="#" class="dropdown-item" data-bs-auto-close="outside">camera battery grip</a>
+                        <a href="#" class="dropdown-item" data-bs-auto-close="outside">blackmagic accessories</a>
+                        <a href="#" class="dropdown-item" data-bs-auto-close="outside">DJI accessories</a>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="#" class="dropdown-item" data-bs-auto-close="outside">Digital cameras</a></li>
+                <li><a href="DSLR camera.html" class="dropdown-item" data-bs-auto-close="outside">DSLR cameras</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-auto-close="outside">DSLM cameras</a></li>
+                <li class="dropend">
+                  <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown"
+                    data-bs-auto-close="outside">surveillance camera</a>
+                  <ul class="dropdown-menu shadow submenu">
+                    <li class="dropend">
+                    <li class="dropdown-heading" style="color: var(--secondary-color);">Surveillance Camera</li>
+                    <hr class="dropdown-divider" style="color: var(--secondary-color)">
+                    <a href="#" class="dropdown-item" data-bs-auto-close="outside">Security camera</a>
+                    <a href="#" class="dropdown-item" data-bs-auto-close="outside">Security camera accessories</a>
+                    <a href="#" class="dropdown-item" data-bs-auto-close="outside">DVR</a>
+                </li>
+                </ul>
+                <li><a href="#" class="dropdown-item" data-bs-auto-close="outside">camera drones</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-auto-close="outside">cammera dimbal stabilizer</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-auto-close="outside">insant camera</a></li>
+                </li>
+                </ul>
+                </li>
+                <li class="dropend">
+                  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">Mobile &
+                    Tablets</a>
+                  <ul class="dropdown-menu shadow">
+                    <li><a href="mobiles.html" class="dropdown-item" data-bs-auto-close="outside">Mobile Phones</a></li>
+                    <li><a href="#" class="dropdown-item" data-bs-auto-close="outside">Tablet & eBook redear</a></li>
+                    <li class="dropend">
+                      <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown"
+                        data-bs-auto-close="outside">Mobile accessories</a>
+                      <ul class="dropdown-menu shadow submenu">
+                        <li class="dropend">
+                        <li class="dropdown-heading" style="color: var(--secondary-color);">Mobile Accessories</li>
+                        <hr class="dropdown-divider" style="color: var(--secondary-color)">
+                        <a href="#" class="dropdown-item" data-bs-auto-close="outside">Mobile coveعr & cases</a>
+                        <a href="#" class="dropdown-item" data-bs-auto-close="outside">charge cable and docks</a>
+                        <a href="#" class="dropdown-item" data-bs-auto-close="outside">power banks</a>
+                        <a href="#" class="dropdown-item" data-bs-auto-close="outside">screen protector</a>
+                        <a href="#" class="dropdown-item" data-bs-auto-close="outside">Oter accessories</a>
+                        <a href="#" class="dropdown-item" data-bs-auto-close="outside">phone stand</a>
+                        <a href="#" class="dropdown-item" data-bs-auto-close="outside">monopod & selfie stick</a>
+                        <a href="#" class="dropdown-item" data-bs-auto-close="outside">battery packs</a>
+                        <a href="#" class="dropdown-item" data-bs-auto-close="outside">VR glasses</a>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="#" class="dropdown-item" data-bs-auto-close="outside">Headsets & earphones</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-auto-close="outside">Smart Watches</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-auto-close="outside">Tablet accessories</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-auto-close="outside">Prepaid scratch cards</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-auto-close="outside">Refurbished Mobiles</a></li>
+                <li class="dropend">
+                  <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown"
+                    data-bs-auto-close="outside">surveillance camera</a>
+                  <ul class="dropdown-menu shadow submenu">
+                    <li class="dropend">
+                    <li class="dropdown-heading" style="color: var(--secondary-color);">Surveillance Camera</li>
+                    <hr class="dropdown-divider" style="color: var(--secondary-color)">
+                    <a href="#" class="dropdown-item" data-bs-auto-close="outside">Security camera</a>
+                    <a href="#" class="dropdown-item" data-bs-auto-close="outside">Security camera accessories</a>
+                    <a href="#" class="dropdown-item" data-bs-auto-close="outside">DVR</a>
+                </li>
+                </ul>
+                <li><a href="#" class="dropdown-item" data-bs-auto-close="outside">camera drones</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-auto-close="outside">cammera dimbal stabilizer</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-auto-close="outside">insant camera</a></li>
+                </li>
+                </ul>
+                </li>
+              </div>
+            </div>
+            <form class="d-flex">
+              <input class="form-control me-2 rounded-pill" type="search" placeholder="Search" aria-label="Search"
+                style="width: 250px; background-color: transparent; color: #fff; position: relative;">
+              <button class="btn btn-success" type="submit"
+                style="margin-left: -49px; border-radius:0% 50rem 50rem 0%; z-index: 1; "><i
+                  class="fa fa-search"></i></button>
+            </form>
+            <img src="image/dark theme icon/moon.png" id="icon">
+          </nav>
+          <section id="sliders" class="container">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner" style="background-color: transparent;">
+                <div class="carousel-item active">
+                  <img src="image/slide.png" class="d-block w-100 slide">
+                </div>
+                <div class="carousel-item">
+                  <img src="image/slide.png" class="d-block w-100 slide">
+                </div>
+              </div>
+            </div>
+          </section>
+          <script>
+            $(document).ready(function () {
+              $(".wish-icon i").click(function () {
+                $(this).toggleClass("fa-heart fa-heart-o");
+              });
+            });	
+          </script>
+          <script>
+            $(function () {
+              $('#toggleThis').click(function () {
+                $('#content').slideToggle(500)
+              });
+            });
+          </script>
+
+    <div class="container">
+        <div class="filter col-10" style="position: relative; margin-left: 10%;">
+            <button id="toggleThis" type="button" style="align-self: flex-start; border: none;"><a href="#"
+              class="fa fa-filter" style="font-size: 30px; color: #0d1128;"></a></button>
+              <button id="content">
+                <a class="nav-link" href="index.html">Sort by column</a>
+              </button>
+            </div>
+        <div class="card" id="product" style="margin-top: 8%;">
+            <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+            <div class="row thumb-wrapper" onclick="location.href='laptop1.html';" style="cursor: pointer;">
+                <div class="col-md-4 img-box card-image-top">
+                    <img src="image/products/laptop1/laptop1.jpg" class="img-fluid rounded-start" alt="Missing Image">
+                </div>
+                <div class="col-md-8">
+                    <div class="thumb-content card-body">
+                        <h5 class="fs-card-title">HP OMEN 16-N0023DX Gaming Laptop - AMD Ryzen 7 6800H, 16GB DDR5, 512GB
+                            SSD,
+                            RTX3060 6GB, Windows 11, 16.1" FHD 144Hz IPS, Backlit KB | Mica Silver</h5>
+                        <p class="description">Maximized for gaming, minimized for chill: Gaming laptops don't have to
+                            run hot.
+                            This next-level engineering maximizes desktop-level power while minimizing temperatures with
+                            groundbreaking
+                            new OMEN Tempest Cooling Technology.</p>
+                        <div class="star-rating">
+                            <ul class="list-inline">
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                            </ul>
+                        </div>
+                        <p class="item-price"><strike>Rs. 365999</strike> <b>Rs. 354999</b></p>
+                        <div class="buttons">
+                            <a href="#" class="btn btn-primary col-5" type="button"><i
+                                    class="fa fa-shopping-cart"></i>&nbsp;&nbsp; Add to Cart </a>
+                            <a href="#" class="btn1 btn-primary col-5" type="button">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card" id="product">
+            <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+            <div class="row thumb-wrapper" onclick="location.href='laptop3.html';" style="cursor: pointer;">
+                <div class="col-md-4 img-box card-image-top">
+                    <img src="image/products/laptop3/4.jpg" class="img-fluid rounded-start" alt="Missing Image">
+                </div>
+                <div class="col-md-8">
+                    <div class="thumb-content card-body">
+                        <h5 class="fs-card-title">Samsung 16″ Galaxy Book3 Ultra (Intel Core i7, 16GB RAM – 1TB SSD)
+                            (NP960XFH-XA1US) – Graphite</h5>
+                        <p class="description">Maximized for gaming, minimized for chill: Gaming laptops don't have to
+                            run hot.
+                            This next-level engineering maximizes desktop-level power while minimizing temperatures with
+                            groundbreaking
+                            new OMEN Tempest Cooling Technology.</p>
+                        <div class="star-rating">
+                            <ul class="list-inline">
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star-half-o"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                            </ul>
+                        </div>
+                        <p class="item-price"><strike>Rs. 660,660</strike> <b>Rs 660,000</b></p>
+                        <div class="buttons">
+                            <a href="#" class="btn btn-primary col-5" type="button"><i
+                                    class="fa fa-shopping-cart"></i>&nbsp;&nbsp; Add to Cart </a>
+                            <a href="#" class="btn1 btn-primary col-5" type="button">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card" id="product">
+            <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+            <div class="row thumb-wrapper" onclick="location.href='laptop2.html';" style="cursor: pointer;">
+                <div class="col-md-4 img-box card-image-top">
+                    <img src="image/products/laptop2/2.jpg" class="img-fluid rounded-start" alt="Missing Image">
+                </div>
+                <div class="col-md-8">
+                    <div class="thumb-content card-body">
+                        <h5 class="fs-card-title">HP Envy 15 ED1055WM X360 Touch Screen Laptop</h5>
+                        <p class="description">Maximized for gaming, minimized for chill: Gaming laptops don't have to
+                            run hot.
+                            This next-level engineering maximizes desktop-level power while minimizing temperatures with
+                            groundbreaking
+                            new OMEN Tempest Cooling Technology.</p>
+                        <div class="star-rating">
+                            <ul class="list-inline">
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star-half-o"></i></li>
+                            </ul>
+                        </div>
+                        <p class="item-price"><strike>Rs. 200,000</strike> <b>Rs 195,500</b></p>
+                        <div class="buttons">
+                            <a href="#" class="btn btn-primary col-5" type="button"><i
+                                    class="fa fa-shopping-cart"></i>&nbsp;&nbsp; Add to Cart </a>
+                            <a href="#" class="btn1 btn-primary col-5" type="button">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" id="product">
+            <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+            <div class="row thumb-wrapper" onclick="location.href='DSLR camera1.html';" style="cursor: pointer;">
+                <div class="col-md-4 img-box card-image-top">
+                    <img src="image/products/DSLR/1.jpg" class="img-fluid rounded-start" alt="Missing Image">
+                </div>
+                <div class="col-md-8">
+                    <div class="thumb-content card-body">
+                        <h5 class="fs-card-title">Canon Eos M50 Kit Mark Ii Ef-m 15-45mm Black
+                        </h5>
+                        <p class="description">Canon Eos M50 Kit Mark Ii Ef-m 15-45mm Black
+                            Catering to vloggers and content creators, the black Canon EOS M50 Mark II is a versatile
+                            multimedia camera with a well-rounded photo and video feature-set. Sporting improved
+                            focusing, recording, and sharing capabilities, the M50 Mark II still revolves around the
+                            proven 24.1MP APS-C CMOS sensor and DIGIC 8 image processor, which enable a quick 10 fps
+                            shooting rate, a native sensitivity range of ISO 100-25600, and UHD 4K video recording at
+                            23.98 fps, along with Full HD 1080p60 and HD 720p120 for slow motion capture. Sensor-based
+                            Dual Pixel CMOS AF has been improved with faster speeds and refined Eye Detection AF
+                            performance, and supports both Eye Detection and Face Detection focusing modes when working
+                            with Movie Servo AF to help keep sharp focus on the subject matter. Additionally,
+                            Combination IS 5-axis image stabilization also helps to realize steady, shake-free recording
+                            by minimizing the appearance of camera shake.
+                        </p>
+                        <div class="star-rating">
+                            <ul class="list-inline">
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                            </ul>
+                        </div>
+                        <p class="item-price"><strike>Rs. 165999</strike> <b>Rs. 162999</b></p>
+                        <div class="buttons">
+                            <a href="#" class="btn btn-primary col-5" type="button"><i
+                                    class="fa fa-shopping-cart"></i>&nbsp;&nbsp; Add to Cart </a>
+                            <a href="#" class="btn1 btn-primary col-5" type="button">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card" id="product">
+            <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+            <div class="row thumb-wrapper" onclick="location.href='mobiles1.html';" style="cursor: pointer;">
+                <div class="col-md-4 img-box card-image-top">
+                    <img src="image/products/mobile1/1.jpg" class="img-fluid rounded-start" alt="Missing Image">
+                </div>
+                <div class="col-md-8">
+                    <div class="thumb-content card-body">
+                        <h5 class="fs-card-title">Apple iPhone 14 Pro Max (5G 128GB Purple) US - Non PTA </h5>
+                        <p class="description">
+                            Build OS IOS 16
+                            Dimensions 160.7 x 77.6 x 7.9 mm
+                            Weight 204 g
+                            SIM Dual Sim, Dual Standby (Nano-SIM)
+                            Colors Space Black, Silver, Gold, Deep Purple
+                            Frequency 2G Band SIM1: GSM 850 / 900 / 1800 / 1900
+                            SIM2: GSM 850 / 900 / 1800 / 1900
+                            3G Band HSDPA 850 / 900 / 1700(AWS) / 1900 / 2100
+                            4G Band LTE band 1(2100), 2(1900), 3(1800), 4(1700/2100), 5(850), 7(2600), 8(900), 12(700),
+                            13(700), 17(700), 18(800), 19(800), 20(800), 25(1900), 26(850), 28(700), 29(700), 30(2300),
+                            34(2000), 38(2600), 39(1900), 40(2300), 41(2500), 66(1700/2100)
+                            5G Band Sub6/mmWave </p>
+                        <div class="star-rating">
+                            <ul class="list-inline">
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star-half-o"></i></li>
+                            </ul>
+                        </div>
+                        <p class="item-price"><strike>Rs. 350,999</strike> <b>Rs. 344,999</b></p>
+                        <div class="buttons">
+                            <a href="#" class="btn btn-primary col-5" type="button"><i
+                                    class="fa fa-shopping-cart"></i>&nbsp;&nbsp; Add to Cart </a>
+                            <a href="#" class="btn1 btn-primary col-5" type="button">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card" id="product">
+            <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+            <div class="row thumb-wrapper" onclick="location.href='mobiles2.html';" style="cursor: pointer;">
+                <div class="col-md-4 img-box card-image-top">
+                    <img src="image/products/mobile2/1.jpg" class="img-fluid rounded-start" alt="Missing Image">
+                </div>
+                <div class="col-md-8">
+                    <div class="thumb-content card-body">
+                        <h5 class="fs-card-title">Samsung Galaxy A73 8GB 256GB Awesome White With Official Warranty
+                        </h5>
+                        <p class="description">
+                            Thin and Light Design
+
+                            6.7 FHD+ sAMOLED+ 120Hz Display
+
+                            108MP High Resolution Camera
+
+                            2 Days Battery
+                            *Image simulated for illustrative purposes.**Color and model availability may vary depending
+                            on country or carrier.***Galaxy A73 5G is rated as IP67. Based on test conditions for
+                            submersion in up to 1 meter of fresh water for up to 30 minutes. Safe against low water
+                            pressure only.</p>
+                        <div class="star-rating">
+                            <ul class="list-inline">
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                            </ul>
+                        </div>
+                        <p class="item-price"><strike>Rs. 160,660</strike> <b>Rs 160,000</b></p>
+                        <div class="buttons">
+                            <a href="#" class="btn btn-primary col-5" type="button"><i
+                                    class="fa fa-shopping-cart"></i>&nbsp;&nbsp; Add to Cart </a>
+                            <a href="#" class="btn1 btn-primary col-5" type="button">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="bg-dark p-4 text-white text-center">
+            <p class="p-0">Copyright <a href="#">© CODE4EDUCATION.</a> All Rights Reserved</p>
+          </footer>
+                  <!----preloader------>
+                  <script>
+                    window.addEventListener("load", function() {
+               const loader = document.getElementById("preloader");
+               const body = document.querySelector("body");
+               body.classList.add("lock-scroll"); // add class to lock scrolling
+               setTimeout(() => {
+                 loader.style.display = "none";
+                 body.classList.remove("lock-scroll"); // remove class to unlock scrolling
+               }, 1000); // Change the value to set the duration of the preloader
+             });
+                             </script>
+                <script>
+                  var icon = document.getElementById("icon");
+        
+                  icon.onclick = function () {
+                    document.body.classList.toggle("dark-theme")
+                    if (document.body.classList.contains("dark-theme")) {
+                      icon.src = "image/dark theme icon/sun.png";
+                    }
+                    else {
+                      icon.src = "image/dark theme icon/moon.png"
+                    }
+                  }
+                </script>
+  </div>
+</body>
+
+</html>
